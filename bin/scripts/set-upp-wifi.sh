@@ -47,7 +47,7 @@ fi
 ######################
 
 
-eval WIFILIST=( $( /sbin/iwlist ${WLAN} scan 2>/dev/null | awk -F":" '/ESSID/{print $2}') )
+eval WIFILIST=$( /sbin/iwlist ${WLAN} scan 2>/dev/null | awk -F":" '/ESSID/{print $2}')
 
 WIFIOK=0
 

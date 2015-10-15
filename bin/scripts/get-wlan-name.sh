@@ -1,6 +1,6 @@
 #!/bin/sh
 
-eval WLANLIST=( $( /sbin/ifconfig | grep UP | tr -s ' ' | cut -d' ' -f 1 | grep wlan | sed 's/://' ) )
+eval WLANLIST=$( /sbin/ifconfig | grep UP | tr -s ' ' | cut -d' ' -f 1 | grep wlan | sed 's/://' )
 
 WLAN=${WLANLIST[0]}
 

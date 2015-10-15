@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash +x
 
-eval ROUTERIPLIST=( $( /sbin/ip r | grep default | cut -d ' ' -f 3 ) )
+eval ROUTERIPLIST=$( /sbin/ip r | grep default | cut -d ' ' -f 3 )
 
 ROUTERIP=${ROUTERIPLIST[0]}
 
