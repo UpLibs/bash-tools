@@ -1,0 +1,19 @@
+#!/bin/bash
+
+scriptfile=$(readlink -f $0)
+scriptdir=`dirname $scriptfile`
+
+deviceip=` $scriptdir/get-device-ip.sh `
+
+echo "DEVICE IP: $deviceip"
+
+deviceiprange=` echo "$deviceip" | sed 's/[0-9]*$//' `
+
+echo "DEVICE IP RANGE: $deviceiprange*"
+
+for i in {1..254}
+do
+   echo "SCAN deviceiprange$i"
+done
+
+
